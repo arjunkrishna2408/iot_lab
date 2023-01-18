@@ -1,0 +1,22 @@
+file=open("file1.txt","r")
+file1=open("file1.txt","r")
+file2=open("file2.txt","r")
+file3=open("file3.txt","r")
+
+data = file.readlines()
+a=[]
+
+for line in range(0,len(data)):
+    temp = data[line].split()[1]+" "+data[line].split()[1]+"\n"
+    a.append(temp)
+
+b=sorted(a)
+for line in b:
+    file3.write(line)
+
+for line in data:
+    word = line.split()
+    temp = word[0]+' '+word[2]+'\n'
+    file1.write(temp)
+    temp = word[1]+'\n'
+    file2.write(temp)
